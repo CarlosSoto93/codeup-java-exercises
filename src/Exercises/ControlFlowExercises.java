@@ -7,19 +7,19 @@ public class ControlFlowExercises {
         Scanner sc = new Scanner(System.in);
 ////        1) Loop Basics
 ////        While
-        int i = 5;
-
-        while (i <= 15) {
-            System.out.println(i);
-            i++;
-        }
+//        int i = 5;
+//
+//        while (i <= 15) {
+//            System.out.println(i);
+//            i++;
+//        }
 //
 ////        Do While
-//        int i = 0;
+//        int count = 0;
 //        do{
-//            System.out.println(i);
-//            i += 2;
-//        } while(i <= 100);
+//            System.out.println(count);
+//            count += 2;
+//        } while(count <= 100);
 //
 //        int i = 100;
 //        do{
@@ -121,30 +121,41 @@ public class ControlFlowExercises {
 ////        bonus)
 //        System.out.println("Select a number");
 //        int numberSelected = sc.nextInt();
-//        String number = ";";
+//        String number = " ";
+//        String raindrop = "";
+//        int i = 0;
 //
-//        for (int i = 1; i <= numberSelected; i++) {
+//        do {
+//            i++;
 //            if (numberSelected % i == 0) {
-//                number += i+ ", ";
-//                System.out.println(numberSelected + "'s factors are" + number);
+//                number += i + ", ";
 //
-//                if (i == 3 && i == 5 && i == 7) {
-//                    System.out.println("Raindrop speak: PlingPlangPlong");
-//                    continue;
+//                switch (i) {
+//                    case (3):
+//                        raindrop = "Pling";
+//                        continue;
+//                    case (5):
+//                        raindrop += "Plang";
+//                        continue;
+//                    case (7):
+//                        raindrop += "Plong";
 //                }
-//                if (i == 3) {
-//                    System.out.println("Raindrop speak: Pling");
-//                    continue;
-//                }
-//                if (i == 5) {
-//                    System.out.println("Raindrop speak: Plang");
-//                    continue;
-//                }
-//                if (i == 7) {
-//                    System.out.println("Raindrop speak: Plong");
-//                }
+//
+////               if (i == 3) {
+////                   raindrop = "Pling";
+////               }else if (i == 5) {
+////                   raindrop += "Plang";
+////               }else if (i == 7) {
+////                   raindrop += "Plong";
+////               }
+//
 //            }
+//        } while (i <= numberSelected);
+//        System.out.println(numberSelected + "'s factors are " + number);
+//        if (raindrop != "") {
+//            System.out.println("Raindrop-speak: " + raindrop);
+//        } else {
+//            System.out.println("Raindrop-speak: " + "\"" + numberSelected + "\"");
 //        }
-
     }
 }
