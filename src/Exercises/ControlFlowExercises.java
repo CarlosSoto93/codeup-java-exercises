@@ -43,21 +43,17 @@ public class ControlFlowExercises {
 //        }
 
 ////        2)Fizzbuzz
-//        for (int i = 1; i <= 100; i++) {
-//            if (i % 3 == 0 && i % 5 == 0) {
-//                System.out.println("FizzBuzz");
-//                continue;
-//            }
-//            if (i % 3 == 0) {
-//                System.out.println("Fizz");
-//                continue;
-//            }
-//            if (i % 5 == 0) {
-//                System.out.println("Buzz");
-//                continue;
-//            }
-//            System.out.println(i);
-//        }
+        for (int i = 1; i <= 100; i++) {
+            if (i % 15 == 0) { // is a multiple of both 3 and 5
+                System.out.println("FizzBuzz");
+            }else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            }else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            }else {
+                System.out.println(i);
+            }
+        }
 
 ////        3)
 //        int number = 0;
@@ -159,53 +155,98 @@ public class ControlFlowExercises {
 //        }
 
 ////        bonus) Average and lowest grades
+//
+//        System.out.println("Input your 10 grades");
+//        int lowestGrade = 100;
+//        int gradeOne = sc.nextInt();
+//        int gradeTwo = sc.nextInt();
+//        int gradeThree = sc.nextInt();
+//        int gradeFour = sc.nextInt();
+//        int gradeFive = sc.nextInt();
+//        int gradeSix = sc.nextInt();
+//        int gradeSeven = sc.nextInt();
+//        int gradeEight = sc.nextInt();
+//        int gradeNine = sc.nextInt();
+//        int gradeTen = sc.nextInt();
+//
+//        int average = (gradeOne + gradeTwo + gradeThree + gradeFour + gradeFive + gradeSix + gradeSeven + gradeEight + gradeNine + gradeTen) / 10;
+//        System.out.println("Average: " + average);
+//
+//        if (gradeOne < lowestGrade){
+//            lowestGrade = gradeOne;
+//        }
+//        if ( gradeTwo < lowestGrade){
+//            lowestGrade = gradeTwo;
+//        }
+//        if ( gradeThree < lowestGrade){
+//            lowestGrade = gradeThree;
+//        }
+//        if ( gradeFour < lowestGrade){
+//            lowestGrade = gradeFour;
+//        }
+//        if ( gradeFive < lowestGrade){
+//            lowestGrade = gradeFive;
+//        }
+//        if ( gradeSix < lowestGrade){
+//            lowestGrade = gradeSix;
+//        }
+//        if ( gradeSeven < lowestGrade){
+//            lowestGrade = gradeSeven;
+//        }
+//        if ( gradeEight < lowestGrade){
+//            lowestGrade = gradeEight;
+//        }
+//        if ( gradeNine < lowestGrade){
+//            lowestGrade = gradeNine;
+//        }
+//        if ( gradeTen < lowestGrade){
+//            lowestGrade = gradeTen;
+//        }
+//        System.out.println("Lowest Grade: " + lowestGrade);
 
-        System.out.println("input 10 grades one by one");
-        int lowestGrade = 100;
-        int gradeOne = sc.nextInt();
-        int gradeTwo = sc.nextInt();
-        int gradeThree = sc.nextInt();
-        int gradeFour = sc.nextInt();
-        int gradeFive = sc.nextInt();
-        int gradeSix = sc.nextInt();
-        int gradeSeven = sc.nextInt();
-        int gradeEight = sc.nextInt();
-        int gradeNine = sc.nextInt();
-        int gradeTen = sc.nextInt();
+////        bonus) Zoologist
+//
+//        System.out.println("What animal do you want to study? ");
+//        System.out.println("Elephants/ Giraffes/ Chimpanzees (Default)");
+//        String animalToStudy = sc.next();
+//
+//        if (animalToStudy.equalsIgnoreCase("elephants")) {
+//            System.out.println("Ok, Elephants it is then.");
+//            System.out.println("There are 4 Elephants, input their ages");
+//            int ageOne = sc.nextInt();
+//            int ageTwo = sc.nextInt();
+//            int ageThree = sc.nextInt();
+//            int ageFour = sc.nextInt();
+//        }else if (animalToStudy.equalsIgnoreCase("giraffes")) {
+//            System.out.println("Ok, Giraffes it is then.");
+//            System.out.println("There are 3 Giraffes, input their ages");
+//            int ageOne = sc.nextInt();
+//            int ageTwo = sc.nextInt();
+//            int ageThree = sc.nextInt();
+//        }else if (animalToStudy.equalsIgnoreCase("chimpanzees")) {
+//            System.out.println("OK, Chimpanzees it is then.");
+//            System.out.println("There are 8 Chimpanzees, input their ages");
+//            int ageOne = sc.nextInt();
+//            int ageTwo = sc.nextInt();
+//            int ageThree = sc.nextInt();
+//            int ageFour = sc.nextInt();
+//            int ageFive = sc.nextInt();
+//            int ageSix = sc.nextInt();
+//            int ageSeven = sc.nextInt();
+//            int ageEight = sc.nextInt();
+//        }else {
+//            System.out.println("We'll just do Chimpanzees.");
+//            System.out.println("There are 8 Chimpanzees, input their ages");
+//            int ageOne = sc.nextInt();
+//            int ageTwo = sc.nextInt();
+//            int ageThree = sc.nextInt();
+//            int ageFour = sc.nextInt();
+//            int ageFive = sc.nextInt();
+//            int ageSix = sc.nextInt();
+//            int ageSeven = sc.nextInt();
+//            int ageEight = sc.nextInt();
+//        }
 
-        int average = (gradeOne + gradeTwo + gradeThree + gradeFour + gradeFive + gradeSix + gradeSeven + gradeEight + gradeNine + gradeTen) / 10;
-        System.out.println("Average: " + average);
 
-        if (gradeOne < lowestGrade){
-            lowestGrade = gradeOne;
-        }
-        if ( gradeTwo < lowestGrade){
-            lowestGrade = gradeTwo;
-        }
-        if ( gradeThree < lowestGrade){
-            lowestGrade = gradeThree;
-        }
-        if ( gradeFour < lowestGrade){
-            lowestGrade = gradeFour;
-        }
-        if ( gradeFive < lowestGrade){
-            lowestGrade = gradeFive;
-        }
-        if ( gradeSix < lowestGrade){
-            lowestGrade = gradeSix;
-        }
-        if ( gradeSeven < lowestGrade){
-            lowestGrade = gradeSeven;
-        }
-        if ( gradeEight < lowestGrade){
-            lowestGrade = gradeEight;
-        }
-        if ( gradeNine < lowestGrade){
-            lowestGrade = gradeNine;
-        }
-        if ( gradeTen < lowestGrade){
-            lowestGrade = gradeTen;
-        }
-        System.out.println("Lowest Grade: " + lowestGrade);
     }
 }
