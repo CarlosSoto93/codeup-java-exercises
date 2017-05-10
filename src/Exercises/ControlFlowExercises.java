@@ -118,7 +118,7 @@ public class ControlFlowExercises {
 //            System.out.println("ok");
 //        } while (anotherGrade.equalsIgnoreCase("yes"));
 
-////        bonus)
+////        bonus) Raindrop
 //        System.out.println("Select a number");
 //        int numberSelected = sc.nextInt();
 //        String number = " ";
@@ -157,5 +157,55 @@ public class ControlFlowExercises {
 //        } else {
 //            System.out.println("Raindrop-speak: " + "\"" + numberSelected + "\"");
 //        }
+
+////        bonus) Average and lowest grades
+
+        System.out.println("input 10 grades one by one");
+        int lowestGrade = 100;
+        int gradeOne = sc.nextInt();
+        int gradeTwo = sc.nextInt();
+        int gradeThree = sc.nextInt();
+        int gradeFour = sc.nextInt();
+        int gradeFive = sc.nextInt();
+        int gradeSix = sc.nextInt();
+        int gradeSeven = sc.nextInt();
+        int gradeEight = sc.nextInt();
+        int gradeNine = sc.nextInt();
+        int gradeTen = sc.nextInt();
+
+        int average = (gradeOne + gradeTwo + gradeThree + gradeFour + gradeFive + gradeSix + gradeSeven + gradeEight + gradeNine + gradeTen) / 10;
+        System.out.println("Average: " + average);
+
+        if (gradeOne < lowestGrade){
+            lowestGrade = gradeOne;
+        }
+        if ( gradeTwo < lowestGrade){
+            lowestGrade = gradeTwo;
+        }
+        if ( gradeThree < lowestGrade){
+            lowestGrade = gradeThree;
+        }
+        if ( gradeFour < lowestGrade){
+            lowestGrade = gradeFour;
+        }
+        if ( gradeFive < lowestGrade){
+            lowestGrade = gradeFive;
+        }
+        if ( gradeSix < lowestGrade){
+            lowestGrade = gradeSix;
+        }
+        if ( gradeSeven < lowestGrade){
+            lowestGrade = gradeSeven;
+        }
+        if ( gradeEight < lowestGrade){
+            lowestGrade = gradeEight;
+        }
+        if ( gradeNine < lowestGrade){
+            lowestGrade = gradeNine;
+        }
+        if ( gradeTen < lowestGrade){
+            lowestGrade = gradeTen;
+        }
+        System.out.println("Lowest Grade: " + lowestGrade);
     }
 }
