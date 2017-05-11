@@ -43,36 +43,36 @@ public class ControlFlowExercises {
 //        }
 
 ////        2)Fizzbuzz
-        for (int i = 1; i <= 100; i++) {
-            if (i % 15 == 0) { // is a multiple of both 3 and 5
-                System.out.println("FizzBuzz");
-            }else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            }else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            }else {
-                System.out.println(i);
-            }
-        }
+//        for (int i = 1; i <= 100; i++) {
+//            if (i % 15 == 0) { // is a multiple of both 3 and 5
+//                System.out.println("FizzBuzz");
+//            }else if (i % 3 == 0) {
+//                System.out.println("Fizz");
+//            }else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//            }else {
+//                System.out.println(i);
+//            }
+//        }
 
 ////        3)
-//        int number = 0;
-//        String anotherNumber;
-//
-//        do{
-//            System.out.println("What number would you like to go up to?");
-//            number = sc.nextInt();
-//            System.out.println("you number is " + number);
-//            System.out.println("Here is your table!");
-//            System.out.println("number | squared | cubed");
-//            System.out.println("------ | ------- | -----");
-//
-//            for (int i = 1; i <= number; i++) {
-//                System.out.println(i + "      | " + i * i + "       | " + i * i * i);
-//            }
-//                System.out.println("Continue? Type Yes/No");
-//                anotherNumber = sc.next();
-//        } while(anotherNumber.equalsIgnoreCase("yes"));
+        int number = 0;
+        String anotherNumber;
+
+        do{
+            System.out.println("What number would you like to go up to?");
+            number = sc.nextInt();
+            System.out.println("you number is " + number);
+            System.out.println("Here is your table!");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+
+            for (int i = 1; i <= number; i++) {
+                System.out.printf("%-7d| %-8d| %d%n", i, i * i, i * i * i);//used printf to fix formatting
+            }
+                System.out.println("Continue? Type Yes/No");
+                anotherNumber = sc.next();
+        } while(anotherNumber.equalsIgnoreCase("yes"));
 
 ////        4)
 //        int grade = 0;
