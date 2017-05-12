@@ -8,26 +8,28 @@ public class MethodsExercises {
 
     public static void main(String[] args) {
 ////        for 1)
-//        int x = 5;
-//        int y = 0;
-//
-//        System.out.println(addition(x, y));
-//        System.out.println(subtraction(x, y));
-//        System.out.println(multiplication(x, y));
-//        if (y != 0) {
-//            System.out.println(division(x, y));
-//        } else {
-//            System.out.println("You can not divide by 0");
-//        }
-//        if (y != 0) {
-//            System.out.println(modulus(x, y));
-//        } else {
-//            System.out.println("You can not modulus by 0");
-//        }
+        int x = 5;
+        int y = 10;
+
+        System.out.println(addition(x, y));
+        System.out.println(subtraction(x, y));
+        System.out.println(multiplication(x, y));
+        if (y != 0) {
+            System.out.println(division(x, y));
+        } else {
+            System.out.println("You can not divide by 0");
+        }
+        if (y != 0) {
+            System.out.println(modulus(x, y));
+        } else {
+            System.out.println("You can not modulus by 0");
+        }
+
 
 ////        for 2)
 //        int userInput = getInteger(1, 10);
 //        System.out.println(userInput);
+
 
 //        for 3)
 //        String anotherFactorial = "yes";
@@ -55,49 +57,65 @@ public class MethodsExercises {
 //            } while (roll.equalsIgnoreCase("y"));
 //        }
 
+
 ////        for 5)
-        System.out.println("Lets play Higher Lower. y/n");
-        int gameNumber = (int) (Math.random() * 100 + 1);
-        String wantToPlay = input.next();
-        if (wantToPlay.equalsIgnoreCase("y")) {
-            int userGuess;
-            do {
-                System.out.println("Whats your guess?");
-                userGuess = input.nextInt();
-                System.out.println(playHigherLower(gameNumber, userGuess));
-            } while (userGuess != gameNumber);
-            System.out.println("The number was " + gameNumber);
-        }
+//        System.out.println("Lets play Higher Lower. y/n");
+//        int gameNumber = (int) (Math.random() * 100 + 1);
+//        String wantToPlay = input.next();
+//        if (wantToPlay.equalsIgnoreCase("y")) {
+//            int userGuess;
+//            do {
+//                System.out.println("Whats your guess?");
+//                userGuess = input.nextInt();
+//                System.out.println(playHigherLower(gameNumber, userGuess));
+//            } while (userGuess != gameNumber);
+//            System.out.println("The number was " + gameNumber);
+//        }
 
 
     }
 
 
-////       for 1)
-//    public static int addition(int inputOne, int inputTwo) {
-//        int answer = inputOne + inputTwo;
+    ////       for 1)
+    public static int addition(int inputOne, int inputTwo) {
+        int answer = inputOne + inputTwo;
+        return answer;
+    }
+
+    public static int subtraction(int inputOne, int inputTwo) {
+        int answer = inputOne - inputTwo;
+        return answer;
+    }
+
+    public static int multiplication(int inputOne, int inputTwo) {
+        //answer with recursion
+        if (inputTwo == 1) {
+            return inputOne;
+        } else {
+        return inputOne + multiplication(inputOne, inputTwo - 1);
+        }
+
+        //answer with a loop
+//        int answer = 0;
+//        for (int i = 1; i <= inputTwo; i++) {
+//            answer += inputOne;
+//        }
 //        return answer;
-//    }
-//
-//    public static int subtraction(int inputOne, int inputTwo) {
-//        int answer = inputOne - inputTwo;
-//        return answer;
-//    }
-//
-//    public static int multiplication(int inputOne, int inputTwo) {
+
+        //answer with *
 //        int answer = inputOne * inputTwo;
 //        return answer;
-//    }
-//
-//    public static int division(int inputOne, int inputTwo) {
-//        int answer = inputOne / inputTwo;
-//        return answer;
-//    }
-//
-//    public static int modulus(int inputOne, int inputTwo) {
-//        int answer = inputOne % inputTwo;
-//        return answer;
-//    }
+    }
+
+    public static int division(int inputOne, int inputTwo) {
+        int answer = inputOne / inputTwo;
+        return answer;
+    }
+
+    public static int modulus(int inputOne, int inputTwo) {
+        int answer = inputOne % inputTwo;
+        return answer;
+    }
 
 ////    for 2)
 //    public static int getInteger(int min, int max) {
@@ -140,15 +158,15 @@ public class MethodsExercises {
 
 
     //////    for 5)
-    public static String playHigherLower(int gameNumber, int userGuess) {
-        if (userGuess < gameNumber) {
-            return ("HIGHER");
-        } else if (userGuess > gameNumber) {
-            return ("LOWER");
-        } else if (userGuess == gameNumber) {
-            return ("GOOD GUESS!");
-        }
-        return "hi";
-    }
+//    public static String playHigherLower(int gameNumber, int userGuess) {
+//        if (userGuess < gameNumber) {
+//            return ("HIGHER");
+//        } else if (userGuess > gameNumber) {
+//            return ("LOWER");
+//        } else if (userGuess == gameNumber) {
+//            return ("GOOD GUESS!");
+//        }
+//        return "";
+//    }
 
 }
