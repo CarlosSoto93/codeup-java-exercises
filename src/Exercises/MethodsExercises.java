@@ -41,18 +41,32 @@ public class MethodsExercises {
 
 
 ////        for 4)
-        System.out.println("Enter the number of side on your dice.");
-        int diceSides = input.nextInt();
+//        System.out.println("Enter the number of side on your dice.");
+//        int diceSides = input.nextInt();
+//
+//        System.out.println("Do you want to roll your dice? y/n");
+//        String roll = input.next();
+//
+//        if (roll.equalsIgnoreCase("y")) {
+//            do {
+//                System.out.println(diceRolls(diceSides));
+//                System.out.println("Do you want to roll dice again? y/n");
+//                roll = input.next();
+//            } while (roll.equalsIgnoreCase("y"));
+//        }
 
-        System.out.println("Do you want to roll your dice? y/n");
-        String roll = input.next();
-
-        if (roll.equalsIgnoreCase("y")) {
+////        for 5)
+        System.out.println("Lets play Higher Lower. y/n");
+        int gameNumber = (int) (Math.random() * 100 + 1);
+        String wantToPlay = input.next();
+        if (wantToPlay.equalsIgnoreCase("y")) {
+            int userGuess;
             do {
-                System.out.println(diceRolls(diceSides));
-                System.out.println("Do you want to roll dice again? y/n");
-                roll = input.next();
-            } while (roll.equalsIgnoreCase("y"));
+                System.out.println("Whats your guess?");
+                userGuess = input.nextInt();
+                System.out.println(playHigherLower(gameNumber, userGuess));
+            } while (userGuess != gameNumber);
+            System.out.println("The number was " + gameNumber);
         }
 
 
@@ -107,7 +121,7 @@ public class MethodsExercises {
 //        long factorial = 1;
 //            if (1 <= userNumber && userNumber <= 10) {
 //                for (int i = 1; i <= userNumber; i++) {
-//                    factorial *= i;
+//                    factorial = factorial * i;
 //                }
 //            } else {
 //                System.out.println("Not a valid number");
@@ -118,9 +132,23 @@ public class MethodsExercises {
 
 
     ////    for 4)
-    public static String diceRolls(int diceSides) {
-        int diceOne = (int) (Math.random() * (diceSides ) + 1);
-        int diceTwo = (int) (Math.random() * (diceSides ) + 1);
-        return ("Your numbers are: \n" + diceOne + ", " + diceTwo);
+//    public static String diceRolls(int diceSides) {
+//        int diceOne = (int) (Math.random() * (diceSides ) + 1);
+//        int diceTwo = (int) (Math.random() * (diceSides ) + 1);
+//        return ("Your numbers are: \n" + diceOne + ", " + diceTwo);
+//    }
+
+
+    //////    for 5)
+    public static String playHigherLower(int gameNumber, int userGuess) {
+        if (userGuess < gameNumber) {
+            return ("HIGHER");
+        } else if (userGuess > gameNumber) {
+            return ("LOWER");
+        } else if (userGuess == gameNumber) {
+            return ("GOOD GUESS!");
+        }
+        return "hi";
     }
+
 }
