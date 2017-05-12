@@ -30,14 +30,31 @@ public class MethodsExercises {
 //        System.out.println(userInput);
 
 //        for 3)
-        String anotherFactorial = "yes";
-        do {
-            if (anotherFactorial.equalsIgnoreCase("yes")) {
-                System.out.println("Factorial = " + calculateFactorial());
-            }
-            System.out.println("Calculate another Factorial? yes/no");
-            anotherFactorial = input.next();
-        } while (anotherFactorial.equalsIgnoreCase("yes"));
+//        String anotherFactorial = "yes";
+//        do {
+//            if (anotherFactorial.equalsIgnoreCase("yes")) {
+//                System.out.println("Factorial = " + calculateFactorial());
+//            }
+//            System.out.println("Calculate another Factorial? yes/no");
+//            anotherFactorial = input.next();
+//        } while (anotherFactorial.equalsIgnoreCase("yes"));
+
+
+////        for 4)
+        System.out.println("Enter the number of side on your dice.");
+        int diceSides = input.nextInt();
+
+        System.out.println("Do you want to roll your dice? y/n");
+        String roll = input.next();
+
+        if (roll.equalsIgnoreCase("y")) {
+            do {
+                System.out.println(diceRolls(diceSides));
+                System.out.println("Do you want to roll dice again? y/n");
+                roll = input.next();
+            } while (roll.equalsIgnoreCase("y"));
+        }
+
 
     }
 
@@ -83,20 +100,27 @@ public class MethodsExercises {
 
 
 ////    for 3)
-    public static long calculateFactorial() {
-        System.out.println("(Calculate Factors)");
-        System.out.println("Enter a number between 1 and 10.");
-        int userNumber = input.nextInt();
-        long factorial = 1;
-            if (1 <= userNumber && userNumber <= 10) {
-                for (int i = 1; i <= userNumber; i++) {
-                    factorial *= i;
-                }
-            } else {
-                System.out.println("Not a valid number");
-                return calculateFactorial();
-            }
-            return factorial;
-    }
+//    public static long calculateFactorial() {
+//        System.out.println("(Calculate Factors)");
+//        System.out.println("Enter a number between 1 and 10.");
+//        int userNumber = input.nextInt();
+//        long factorial = 1;
+//            if (1 <= userNumber && userNumber <= 10) {
+//                for (int i = 1; i <= userNumber; i++) {
+//                    factorial *= i;
+//                }
+//            } else {
+//                System.out.println("Not a valid number");
+//                return calculateFactorial();
+//            }
+//            return factorial;
+//    }
 
+
+    ////    for 4)
+    public static String diceRolls(int diceSides) {
+        int diceOne = (int) (Math.random() * (diceSides ) + 1);
+        int diceTwo = (int) (Math.random() * (diceSides ) + 1);
+        return ("Your numbers are: \n" + diceOne + ", " + diceTwo);
+    }
 }
