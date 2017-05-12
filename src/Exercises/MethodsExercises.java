@@ -31,15 +31,18 @@ public class MethodsExercises {
 //        System.out.println(userInput);
 
 
-//        for 3)
-//        String anotherFactorial = "yes";
-//        do {
-//            if (anotherFactorial.equalsIgnoreCase("yes")) {
-//                System.out.println("Factorial = " + calculateFactorial());
-//            }
-//            System.out.println("Calculate another Factorial? yes/no");
-//            anotherFactorial = input.next();
-//        } while (anotherFactorial.equalsIgnoreCase("yes"));
+////        for 3)
+        String anotherFactorial = "y";
+        do {
+            if (anotherFactorial.equalsIgnoreCase("y")) {
+                System.out.println("(Calculate Factors)");
+                System.out.println("Enter a number between 1 and 65.");
+                int userNumber = input.nextInt();
+                System.out.println("Factorial = " + calculateFactorial(userNumber));
+            }
+            System.out.println("Calculate another Factorial? y/n");
+            anotherFactorial = input.next();
+        } while (anotherFactorial.equalsIgnoreCase("y"));
 
 
 ////        for 4)
@@ -59,18 +62,18 @@ public class MethodsExercises {
 
 
 ////        for 5)
-        System.out.println("Lets play Higher Lower. y/n");
-        int gameNumber = (int) (Math.random() * 100 + 1);
-        String wantToPlay = input.next();
-        if (wantToPlay.equalsIgnoreCase("y")) {
-            int userGuess;
-            do {
-                System.out.println("Whats your guess?");
-                userGuess = input.nextInt();
-                System.out.println(playHigherLower(gameNumber, userGuess));
-            } while (userGuess != gameNumber);
-            System.out.println("The number was " + gameNumber);
-        }
+//        System.out.println("Lets play Higher Lower. y/n");
+//        int gameNumber = (int) (Math.random() * 100 + 1);
+//        String wantToPlay = input.next();
+//        if (wantToPlay.equalsIgnoreCase("y")) {
+//            int userGuess;
+//            do {
+//                System.out.println("Whats your guess?");
+//                userGuess = input.nextInt();
+//                System.out.println(playHigherLower(gameNumber, userGuess));
+//            } while (userGuess != gameNumber);
+//            System.out.println("The number was " + gameNumber);
+//        }
 
 
     }
@@ -131,22 +134,23 @@ public class MethodsExercises {
 //    }
 
 
-////    for 3)
-//    public static long calculateFactorial() {
-//        System.out.println("(Calculate Factors)");
-//        System.out.println("Enter a number between 1 and 10.");
-//        int userNumber = input.nextInt();
-//        long factorial = 1;
-//            if (1 <= userNumber && userNumber <= 10) {
-//                for (int i = 1; i <= userNumber; i++) {
-//                    factorial = factorial * i;
-//                }
-//            } else {
-//                System.out.println("Not a valid number");
-//                return calculateFactorial();
-//            }
+    ////    for 3)
+    public static long calculateFactorial(int userNumber) {
+        long factorial = userNumber;
+        if (1 <= userNumber && userNumber <= 65) {
+            ////Finding Factorial with recursion
+            if (userNumber == 1) {
+                return factorial *= userNumber;
+            } else {
+                return factorial * calculateFactorial(userNumber - 1);
+            }
+
+        } else {
+            System.out.println("Not a valid number");
+            return calculateFactorial(userNumber);
+        }
 //            return factorial;
-//    }
+    }
 
 
     ////    for 4)
@@ -158,14 +162,14 @@ public class MethodsExercises {
 
 
     //////    for 5)
-    public static String playHigherLower(int gameNumber, int userGuess) {
-        if (userGuess < gameNumber) {
-            return ("HIGHER");
-        } else if (userGuess > gameNumber) {
-            return ("LOWER");
-        } else {
-            return ("GOOD GUESS!");
-        }
-    }
+//    public static String playHigherLower(int gameNumber, int userGuess) {
+//        if (userGuess < gameNumber) {
+//            return ("HIGHER");
+//        } else if (userGuess > gameNumber) {
+//            return ("LOWER");
+//        } else {
+//            return ("GOOD GUESS!");
+//        }
+//    }
 
 }
