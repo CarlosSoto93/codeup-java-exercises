@@ -5,7 +5,6 @@ public class InputTest {
 
     public static void main(String[] args) {
         Input input = new Input();
-        ;
 
         String promptGetString = "Type a string that i can return.";
         System.out.println(input.getString(promptGetString));
