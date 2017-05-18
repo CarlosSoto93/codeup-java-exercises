@@ -6,23 +6,17 @@ public class InputTest {
     public static void main(String[] args) {
         Input input = new Input();
 
-        String promptGetString = "Type a string that i can return.";
-        System.out.println(input.getString(promptGetString));
+        System.out.println(input.getString("Type a string that i can return."));
 
-        String promptYesNo = "Type yes or no";
-        System.out.println(input.yesNo(promptYesNo));
+        System.out.println(input.yesNo("Type yes or no"));
 
-        String promptGetIntMinMax = "Input an integer between:";
-        System.out.println(input.getInt(1, 10, promptGetIntMinMax));
+        System.out.println(input.getInt("Input an integer between:", 1, 10));
 
-        String promptGetInt = "Input an integer";
-        System.out.println(input.getInt(promptGetInt));
+        System.out.println(input.getInt("Input an integer"));
 
-        String promptGetDoubleMinMax = "Input a double between:";
-        System.out.println(input.getDouble(1.0, 10.0, promptGetDoubleMinMax));
+        System.out.println(input.getDouble("Input a double between: ", 1.0, 10.0));
 
-        String promptGetDouble = "Input a double";
-        System.out.println(input.getDouble(promptGetDouble));
+        System.out.println(input.getDouble("Input a double"));
     }
 
 }

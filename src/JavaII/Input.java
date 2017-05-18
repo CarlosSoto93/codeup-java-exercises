@@ -12,59 +12,47 @@ public class Input {
 
     public String getString(String prompt) {
         System.out.println(prompt);
-        String string = scanner.nextLine();
-        return string;
+        return scanner.nextLine();
     }
 
     public boolean yesNo(String prompt) {
         System.out.println(prompt);
         String message = scanner.next();
-        switch (message) {
-            case "y":
-                return true;
-            case "Y":
-                return true;
-            case "yes":
-                return true;
-            case "Yes":
-                return true;
-            default:
-                return false;
+        if (message.equalsIgnoreCase("y") || message.equalsIgnoreCase("yes")){
+            return true;
         }
+        return false;
     }
 
-    public int getInt(int min, int max, String prompt) {
-        System.out.println(prompt);
-        System.out.println(min + " and " + max);
+    public int getInt(String prompt, int min, int max) {
+        System.out.println(prompt + " " + min + " and " + max);
         int inputNumber = scanner.nextInt();
         if (min <= inputNumber && inputNumber <= max) {
             return inputNumber;
         }
         System.out.println("Invalid integer");
-        return getInt(min, max, prompt);
+        return getInt(prompt, min, max);
     }
 
     public int getInt(String prompt) {
         System.out.println(prompt);
-        int inputNumber = scanner.nextInt();
-        return inputNumber;
+        return scanner.nextInt();
+
     }
 
-    public double getDouble(double min, double max, String prompt) {
-        System.out.println(prompt);
-        System.out.println(min + " and " + max);
+    public double getDouble(String prompt, double min, double max) {
+        System.out.println(prompt + " " + min + " and " + max);
         double inputNumber = scanner.nextDouble();
         if (min <= inputNumber && inputNumber <= max) {
             return inputNumber;
         }
         System.out.println("Invalid double");
-        return getDouble(min, max, prompt);
+        return getDouble(prompt, min, max);
     }
 
     public double getDouble(String prompt) {
         System.out.println(prompt);
-        double inputNumber = scanner.nextDouble();
-        return inputNumber;
+        return scanner.nextDouble();
     }
 
 

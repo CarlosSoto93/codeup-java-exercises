@@ -1,8 +1,5 @@
 package JavaII;
 
-/**
- * Created by Carlos on 5/17/17.
- */
 public class Circle {
     private double radius;
     private static int numberOfCircles = 0;
@@ -13,13 +10,11 @@ public class Circle {
     }
 
     public double getArea(){
-        double area = Math.PI * Math.pow(radius, 2);
-        return area;
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public double getCircumference(){
-        double circumference = 2 * Math.PI * radius;
-        return circumference;
+        return 2 * Math.PI * radius;
     }
 
     public static int getNumberOfCircles() {
