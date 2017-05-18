@@ -25,12 +25,12 @@ public class Input {
     }
 
     public int getInt(String prompt, int min, int max) {
-        System.out.println(prompt + " " + min + " and " + max);
+        System.out.println(prompt + " " + min + " - " + max);
         int inputNumber = scanner.nextInt();
         if (min <= inputNumber && inputNumber <= max) {
             return inputNumber;
         }
-        System.out.println("Invalid integer");
+        System.out.println("Invalid");
         return getInt(prompt, min, max);
     }
 
@@ -41,12 +41,12 @@ public class Input {
     }
 
     public double getDouble(String prompt, double min, double max) {
-        System.out.println(prompt + " " + min + " and " + max);
+        System.out.println(prompt + " " + min + " - " + max);
         double inputNumber = scanner.nextDouble();
         if (min <= inputNumber && inputNumber <= max) {
             return inputNumber;
         }
-        System.out.println("Invalid double");
+        System.out.println("Invalid");
         return getDouble(prompt, min, max);
     }
 

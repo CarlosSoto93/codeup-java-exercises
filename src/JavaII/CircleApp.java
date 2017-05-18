@@ -6,8 +6,7 @@ public class CircleApp {
         Input entry = new Input();
         boolean anotherCircle = true;
         do {
-            String promptForDouble = "What is the radius of your circle?";
-            double inputRadius = entry.getDouble(promptForDouble);
+            double inputRadius = entry.getDouble("What is the radius of your circle?");
 
             circle = new Circle(inputRadius);
 
