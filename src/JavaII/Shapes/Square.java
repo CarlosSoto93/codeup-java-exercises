@@ -1,4 +1,4 @@
-package JavaII;
+package JavaII.Shapes;
 
 public class Square extends Rectangle {
     private double side;

@@ -1,4 +1,4 @@
-package JavaII;
+package JavaII.Shapes;
 
 public class ShapesTest {
     public static void main(String[] args) {
