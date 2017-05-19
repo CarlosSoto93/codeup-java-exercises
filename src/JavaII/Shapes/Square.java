@@ -9,10 +9,12 @@ public class Square extends Rectangle {
     }
 
     public double getArea(){
+        System.out.println("Square method");
         return Math.pow(side, 2);
     }
 
     public double getPerimeter(){
+        System.out.println("Square method");
         return 4 * side;
     }
 }
