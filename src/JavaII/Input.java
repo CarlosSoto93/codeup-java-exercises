@@ -10,6 +10,10 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
+    public void removeEnter(){
+        this.scanner.nextLine();
+    }
+
     public String getString(String prompt) {
         System.out.println(prompt);
         return scanner.nextLine();

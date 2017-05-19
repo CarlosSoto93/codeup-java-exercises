@@ -7,12 +7,16 @@ public class ServerNameGenerator {
 
         String[] nouns = {"Armadillo", "Caterpillar", "Crab", "Ginseng", "Lilac", "Learning", "Mantle", "Megaliac", "Reminder", "Router"};
 
+        System.out.println(generateName(adjectives, nouns));
 
-        System.out.println(randomElement(adjectives) + " " + randomElement(nouns));
     }
 
     public static String randomElement(String[] passedArray) {
         return passedArray[(int) (Math.random() * passedArray.length)];
+    }
+
+    public static String generateName(String[] array, String[] array2){
+        return randomElement(array) + " " + randomElement(array2);
     }
 
 
