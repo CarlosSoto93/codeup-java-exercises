@@ -1,20 +1,17 @@
 package JavaII.Shapes;
 
-public class Square extends Rectangle {
-    private double side;
+class Square extends Quadralateral {
 
     public Square(double side){
-        super (side, side);
-        this.side = side;
+        super(side, side);
     }
 
-    public double getArea(){
-        System.out.println("Square method");
-        return Math.pow(side, 2);
+    void setLength(double length){
+        this.length = length;
     }
 
-    public double getPerimeter(){
-        System.out.println("Square method");
-        return 4 * side;
+    void setWidth(double width){
+        this.width = width;
     }
+
 }
