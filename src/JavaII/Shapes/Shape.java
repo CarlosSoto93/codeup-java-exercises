@@ -1,4 +1,4 @@
 package JavaII.Shapes;
 
-abstract class Shape {
+abstract public class Shape {
 }
