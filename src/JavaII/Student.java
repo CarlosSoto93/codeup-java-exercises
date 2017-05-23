@@ -28,6 +28,14 @@ public class Student {
         return gradesAddedUp / grades.size();
     }
 
+    public String getAllGrades() {
+        String allGrades = "";
+        for (Double grade : grades){
+            allGrades += (grade + "\n");
+        }
+        return allGrades;
+    }
+
     public static void main(String[] args) {
 
         Student studentCarlos = new Student("Carlos");
